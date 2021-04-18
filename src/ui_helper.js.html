@@ -1,0 +1,11 @@
+<script>
+  function setActiveNav(nav) {
+    const elements = document.getElementsByClassName("nav-link");
+    for (var element of elements) {
+      if (element.innerHTML.trim() === nav) {
+        element.classList.add("active");
+        break;
+      }
+    }
+  }
+</script>

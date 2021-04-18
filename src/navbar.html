@@ -1,0 +1,95 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="<?= baseURL ?>"> AppX Technologies </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto mb-2 mb-lg-0 w-100">
+        <li class="nav-item d-lg-none mt-3">
+          <button type="button" class="btn btn btn-outline-primary">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-person-circle"
+              viewBox="0 0 16 16"
+            >
+              <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"></path>
+              <path
+                fill-rule="evenodd"
+                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
+              ></path>
+            </svg>
+            <?= signedInUser ?>
+          </button>
+        </li>
+
+        <li class="nav-item ml-lg-4 mr-2">
+          <a class="nav-link" href="<?= baseURL ?>">Menu1</a>
+        </li>
+
+        <li class="nav-item mr-2">
+          <a class="nav-link" href="<?= baseURL ?>?view=Menu2">Menu2</a>
+        </li>
+
+        <li class="nav-item mr-2">
+          <a class="nav-link" href="<?= baseURL ?>?view=Menu3">Menu3</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            id="navbarDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Menu4
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="<?= baseURL ?>?view=Menu4-sub1"
+              >Menu4-sub1</a
+            >
+            <a class="dropdown-item" href="<?= baseURL ?>?view=Menu4-sub2"
+              >Menu4-sub2</a
+            >
+          </div>
+        </li>
+
+        <!-- profile -->
+        <li class="nav-item ml-lg-auto d-none d-lg-block">
+          <button type="button" class="btn btn-outline-primary">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-person-circle"
+              viewBox="0 0 16 16"
+            >
+              <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"></path>
+              <path
+                fill-rule="evenodd"
+                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
+              ></path>
+            </svg>
+            <?= signedInUser ?>
+          </button>
+        </li>
+        <!-- profile end-->
+      </ul>
+    </div>
+    <!-- nav options end-->
+  </div>
+</nav>
