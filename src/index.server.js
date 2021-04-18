@@ -1,4 +1,4 @@
-function createIndexView(){
+function indexView(){
     var email = Session.getActiveUser().getEmail();
 
     const template = HtmlService.createTemplateFromFile("index.html");
