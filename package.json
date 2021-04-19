@@ -1,15 +1,25 @@
 {
-  "name": "template",
+  "name": "gas-utils",
   "version": "1.0.0",
-  "description": "A starting template for google app script web app",
+  "description": "Utilities for working with google app scripts projects",
   "main": "./gas-utils.js",
   "bin": {
     "gas-utils": "./gas-utils.js"
   },
+  "keywords": [
+    "google app script",
+    "template",
+    "web app",
+    "AppX Technologies"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "AppX technologies",
   "license": "ISC",
-  "type": "module"
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AppX-Technologies/base-gas-app"
+  }
 }
