@@ -95,29 +95,31 @@ function copyFilesInDir(
     }
 
     filenames.forEach(async (filename) => {
-      if (!isSrc(filename)) {
-        try {
-          const content = fs.readFileSync(dirName + "/" + filename, "utf-8");
+      if (filename !== "pageTemplate") {
+        if (!isSrc(filename)) {
+          try {
+            const content = fs.readFileSync(dirName + "/" + filename, "utf-8");
 
-          await createWebAppFile(
+            await createWebAppFile(
+              projectName,
+              filename,
+              content,
+              destDir,
+              initialFileName,
+              unchangedName
+            );
+          } catch (e) {
+            onError(e);
+          }
+        } else {
+          copyFilesInDir(
+            srcDirName,
+            destDir + "/src",
             projectName,
-            filename,
-            content,
-            destDir,
-            initialFileName,
-            unchangedName
+            unchangedName,
+            initialFileName
           );
-        } catch (e) {
-          onError(e);
         }
-      } else {
-        copyFilesInDir(
-          srcDirName,
-          destDir + "/src",
-          projectName,
-          unchangedName,
-          initialFileName
-        );
       }
     });
   });
