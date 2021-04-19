@@ -2,14 +2,14 @@
   "name": "template",
   "version": "1.0.0",
   "description": "A starting template for google app script web app",
-  "main": "./gas-utils.js",
-  "bin": {
-    "gas-utils": "./gas-utils.js"
-  },
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "AppX technologies",
   "license": "ISC",
+  "dependencies": {
+    "@types/google-apps-script": "^1.0.31"
+  },
   "type": "module"
 }
