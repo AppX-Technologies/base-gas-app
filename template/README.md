@@ -1,16 +1,31 @@
-# base-gas-app
-A base structure for google app script web app project which will get you started in seconds
+# gas-utils
+Utility tools to get you started with a google app scripts app in seconds.
+
+# Commands provided by the script
+```generate-project```: Command that generates a complete webapp project template
+
+```generate-page```: Command that generates a page inside webapp project
+
+# Example usage
+```npx gas-utils generate-project "AppX" ./AppX "About Us" ```
+
+This command creates a new project named AppX inside directory ./AppX (creates a new if not already created). The third arguement is optional and specifies the name of the first page to be included in the project. If not specified, index.html will be generated. 
+
+```npx gas-utils generate-page "Contact Us" "AppX" ```
+
+This command creates a new page with files its associated js and css files. The second arguement is the project name. The project name is supplied to be used in ```navbar brand```, ```<title>``` and ```<footer>```. 
 
 # Things to remember
-- All the routing is done in server.js, whereas creation of views happens inside their respective server.js file which is named as module.server.js
-- All module have scripting and styles done in their own js and css files named as module.js.html and module.css.html respectively
-- Common scripting and styling are placed in common.js.html and common.css.html respectively
+- All the routing is done in server.js, whereas creation of views and their related functions happens inside their respective server.js file which is named as page.server.js (For example. index.server.js)
+- Common server functions which are used throughout the app are placed inside server.js
+- All page have scripting and styles done in their own js and css files named as page.js.html and page.css.html respectively (Ex: index.js.html and index.css.html)
+- Common scripting and styling which are used throughout the app are placed in common.js.html and common.css.html respectively.
 
-## For example
-If we have a module that handles CRUD operation of product, then
-- Routing to the product urls will be done in server.js
-- Functions that create template from html files will be placed in product.server.js
-- Every page will have there own css and js files such as product-add.js.html and product-add.css.html or product-edit.js.html and product-edit.css.html
+### For example
+If we have a page name "Create Products", then
+- Routing to the page urls will be done in server.js and all other functions to be used throughout the project will be done in server.js
+- Functions that create template from html files and also any db related functions will be placed in create_products.server.js
+- Every page will have there own css and js files such as create_products.js.html and create_products.css.html
 
 # Setting up project
 1. The Apps Script CLI (clasp) requires Node.js >= v6.0.0 to be installed.
@@ -24,25 +39,14 @@ clasp login
 ```
 A browser window will open and allow you to login to your google account.
 
-4. Create a new app script project using command
-```
-mkdir project_name
-mkdir project_name/src
-cd project_name/src
-clasp create --title "project_name"
-```
+4. If its a new project, first run the generate-project command on your local computer, Create a new app script project in app script home page and clone it in the src directory using
 
-OR
-
-Clone an existing script using
 ```
-mkdir project_name
-mkdir project_name/src
 cd project_name/src
 clasp clone <scriptID>
 ```
+5. If its a already exising project, just clone it from github.
 
-5. download the repo from (do not clone): https://github.com/AppX-Technologies/base-gas-app and extract it inside project_name (not project_name/src)
 6. run ```npm install``` to get intellisense in vs code
 
 # Push the code
