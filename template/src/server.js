@@ -21,14 +21,15 @@ function unauthorizedView() {
 }
 
 function authenticate() {
-  var listOfAuthorizedUsers = SpreadsheetApp.getActive()
+  // TODO implement auth
+  /* var listOfAuthorizedUsers = SpreadsheetApp.getActive()
     .getSheetByName(authSheetName)
     .getRange("A2:A")
     .getValues()
     .map((a) => a[0])
     .filter((a) => a != "");
   if (!listOfAuthorizedUsers.includes(Session.getActiveUser().getEmail()))
-    return false;
+    return false; */
   return true;
 }
 
