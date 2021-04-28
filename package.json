@@ -1,6 +1,6 @@
 {
   "name": "gas-utils",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Utilities for working with google app scripts projects",
   "main": "./gas-utils.js",
   "bin": {
